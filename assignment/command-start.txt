@@ -1,0 +1,51 @@
+cd C:\Users\Thang\Desktop\Learning\Bigdata\assignment
+
+-------------------------------------------SET UP ENVIRONMENT - VIRTUAL MACHINE--------------------------------------------
+wget https://downloads.apache.org/kafka/3.7.0/kafka_2.12-3.7.0.tgz
+tar -xvf kafka_2.12-3.7.0.tgz
+
+icacls C:\Users\Thang\Desktop\Learning\Bigdata\assignment\kafka-stock-market-project.pem /inheritance:r /grant:r %USERNAME%:F
+
+ssh -i "kafka-stock-market-project.pem" ec2-user@ec2-54-151-182-46.ap-southeast-1.compute.amazonaws.com
+---------------------------------------------------------------------------------------------------------------------------
+
+############################################ 1 tab cmd for ZOOKEEPER ##############################################################
+cd C:\Users\Thang\Desktop\Learning\Bigdata\assignment
+ssh -i "kafka-stock-market-project.pem" ec2-user@ec2-54-151-182-46.ap-southeast-1.compute.amazonaws.com
+cd kafka_2.12-3.7.0/
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+############################################ 1 tab cmd for SERVER    ##############################################################
+cd C:\Users\Thang\Desktop\Learning\Bigdata\assignment
+ssh -i "kafka-stock-market-project.pem" ec2-user@ec2-54-151-182-46.ap-southeast-1.compute.amazonaws.com
+export KAFKA_HEAP_OPTS="-Xmx1024M -Xms128M"
+cd kafka_2.12-3.7.0/
+bin/kafka-server-start.sh config/server.properties
+
+
+-------------------------------------------   Đừng coi cái này -------------------------------------------------------------
+sudo nano config/server.properties
+54.151.182.46
+
+----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+-------------------------------------------    Đừng coi cái này --------------------------------------------------------------
+
+bin/kafka-console-producer.sh --topic demo_test --bootstrap-server 54.151.182.46:9092
+
+
+######################################## 1 tab cmd for CONSUMER ################################################################
+
+cd C:\Users\Thang\Desktop\Learning\Bigdata\assignment
+ssh -i "kafka-stock-market-project.pem" ec2-user@ec2-54-151-182-46.ap-southeast-1.compute.amazonaws.com
+cd kafka_2.12-3.7.0/
+bin/kafka-topics.sh --create --topic demo_test --bootstrap-server 54.151.182.46:9092 --replication-factor 1 --partitions 1 
+bin/kafka-console-consumer.sh --topic demo_test --bootstrap-server 54.151.182.46:9092
+
+ 
+
+
+
