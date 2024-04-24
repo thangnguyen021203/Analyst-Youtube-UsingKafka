@@ -50,4 +50,4 @@ In simple terms, Grafana utilizes the query results based on Athena to visualize
 
 [![Dashboard 2](assignment/image/Dashboard_2.png "Query Athena")](assignment/image/Dashboard_2.png)
 
-***Finally, here is a small project from our team serving the assignment of the course "Big Data Analytics and Business Intelligence." I am very pleased that through this project, I have gained more knowledge about AWS and Kafka.***
+***Finally, here is a small project from our team serving the assignment of the course "Big Data Analytics and Business Intelligence." I am very pleased that through this project, I have gained more knowledge about AWS and Kafka. :D <3 luv***
