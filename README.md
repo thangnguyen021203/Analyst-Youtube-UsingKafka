@@ -46,8 +46,8 @@ Below is a sample query using Athena.
 
 In simple terms, Grafana utilizes the query results based on Athena to visualize data through a dashboard. With auto-reload settings, it is a suitable tool for visualizing real-time data. Below is an image of my dashboard.
 
-[![Dashboard 1](image/Dashboard_1.png "Query Athena")](image/Dashboard_1.png)
+[![Dashboard 1](assignment/image/Dashboard_1.png "Query Athena")](assignment/image/Dashboard_1.png)
 
-[![Dashboard 2](image/Dashboard_2.png "Query Athena")](image/Dashboard_2.png)
+[![Dashboard 2](assignment/image/Dashboard_2.png "Query Athena")](assignment/image/Dashboard_2.png)
 
 ***Finally, here is a small project from our team serving the assignment of the course "Big Data Analytics and Business Intelligence." I am very pleased that through this project, I have gained more knowledge about AWS and Kafka.***
