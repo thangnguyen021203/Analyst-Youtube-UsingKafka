@@ -1,6 +1,12 @@
 # Analyst-Youtube-UsingKafka
 
-[![Overview](assignment/image/Overview.png "Overview")](assignment/image/Overview.png)
+## Technology
+- **Apache Kafka**: version 3.7.0
+- **Google Cloud Service**: YouTube Data API v3
+- **AWS**: EC2, S3, Glue Crawler, Glue Data Catalog, Athena, Grafana
+
+## Model Pipeline
+[![Overview](assignment/image/Overview.png "Pipeline")](assignment/image/Overview.png)
 
 ## Data
 We used API from Google Cloud with the limit 10000 requests/day through Free-base Account. 
